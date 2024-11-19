@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../assets/img/fundo.jpg'); /* Caminho da sua imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra a página inteira */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto a página rola */
+    color: white; /* Torna o texto branco para maior contraste */
+}
+
+header {
+    background-color: #000; /* Fundo preto sólido */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    border-color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    color: black; /* Muda o texto para preto dentro da caixa de conteúdo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.highlight img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.content div {
+    width: 48%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #000; /* Fundo preto sólido */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
