@@ -10,8 +10,8 @@ body {
 }
 
 header {
-    background-color: #000; /* Fundo preto sólido */
-    color: white;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgb(98, 98, 98) 100%); /* Fundo preto sólido */
+    color: white; /* Cor branca no titulo */
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -30,11 +30,14 @@ header nav a {
     font-size: 16px;
     padding: 10px 15px;
     border: 1px solid transparent;
-    border-radius: 5px;
+    border-radius: 20px;
+    border-color: white;
+    font-weight: bold;
 }
 
 header nav a:hover {
-    border-color: white;
+    color: black;
+    background-color: white
 }
 
 .container {
