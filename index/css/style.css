@@ -86,3 +86,88 @@ footer {
     padding: 10px;
     margin-top: 20px;
 }
+
+/* Estilo geral para as caixas dentro de .content */
+.content div {
+    width: 48%;  /* Diminui a largura das caixas para 40%, mais proporcional */
+    background-color: rgba(255, 255, 255, 0.9);  /* Fundo branco mais sólido */
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  /* Sombra mais suave e mais sutil */
+    border-radius: 10px;  /* Bordas mais arredondadas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px; /* Um pequeno espaço entre as caixas */
+}
+
+/* Estilo para os títulos dentro das caixas */
+.content div h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+}
+
+/* Estilo para os campos de texto (textarea) */
+.content textarea {
+    width: 100%;  /* Preenche a largura da caixa */
+    height: 150px;  /* Tamanho fixo da área de texto */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: #f4f4f4;  /* Fundo bem claro */
+    resize: none;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os botões */
+.content button {
+    padding: 12px 25px;
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;  /* Bordas arredondadas para o botão */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;  /* Espaço acima do botão */
+}
+
+.content button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;  /* Coloca as caixas uma em cima da outra */
+        align-items: center;  /* Centraliza as caixas */
+    }
+
+    .content div {
+        width: 80%;  /* As caixas ocupam 80% da largura em telas menores */
+        margin-bottom: 20px;
+    }
+}
+
+.mural {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 20px; /* Espaçamento entre as imagens */
+}
+
+.mural div {
+    text-align: center; /* Centraliza o texto abaixo da imagem */
+}
+
+.mural img {
+    width: 100%; /* Faz as imagens ocuparem a largura total da célula */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Opcional, arredonda as bordas das imagens */
+}
