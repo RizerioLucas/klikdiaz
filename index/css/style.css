@@ -1,5 +1,6 @@
 html{
     height:100%;
+    width: -webkit-fill-available;
 }
 body {
     height:100%;
@@ -141,6 +142,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin: 10px; /* Um pequeno espaço entre as caixas */
+    height:200px /* Determina a altura das caixas */
 }
 
 /* Estilo para os títulos dentro das caixas */
@@ -196,6 +198,19 @@ footer {
         width: 80%;  /* As caixas ocupam 80% da largura em telas menores */
         margin-bottom: 20px;
     }
+
+    .nav-item{
+        font-size: 12px;
+    }
+    .nav-item-active{
+        font-size: 12px;
+    }
+
+    .search-bar{
+        input{
+            width:60% !important;
+        }
+    }
 }
 
 .mural {
@@ -216,5 +231,30 @@ footer {
 footer{
     bottom: 0px;
     position: absolute;
-    width: 100%;
+    width: -webkit-fill-available;
+}
+.search-box{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.search-bar{
+    width:90%;
+    input{
+        padding:0px;
+        width:80%;
+        height:50px;
+        border:none;
+        outline:none;
+        border-radius: 10px;
+    }
+    button{
+        background-color: black;
+        color: white;
+        border:none;
+        border-radius: 10px;
+        width:100px;
+        height:50px;
+    }
 }
