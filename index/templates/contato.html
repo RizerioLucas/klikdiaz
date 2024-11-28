@@ -1,12 +1,10 @@
-<!-- Subi a imagem de inspiração que o edu fez pra ir guiando ta em img -->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Meu Site Fotográfico</title>
-        <link rel="stylesheet" href="../css/style.css"> <!--df Mudar pra imagem de um fotografo-->
+        <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     </head>
     <body style="background: linear-gradient(180deg, rgba(83,83,83,1) 0%, rgba(0,0,0,1) 100%);">
@@ -21,20 +19,17 @@
 
         <div class="container">
             <div class="search-box">
-                    <h1 style="color: white">Entre em contato</h1>
-                    <div class="search-bar">
-                        <input type="text" />
-                        <button type="button">ENVIAR</button>
-                    </div>
+                <h1 style="color: white">Entre em contato</h1>
+                <div class="search-bar">
+                    <!-- Corrigir campo de input para textarea -->
+                    <textarea id="userMessage" rows="10" cols="50" placeholder="Digite sua mensagem de e-mail aqui..." required></textarea>
+                    <!-- Botão chama a função diretamente -->
+                    <button type="button" onclick="enviarEmail()">ENVIAR</button>
+                </div>
             </div>
             
             <div class="content">
                 <div>
-                    <!-- matei o conteúdo só pra se assemelhar ao mockup -->
-                    <!-- <h2>Enviar E-mail</h2>
-                    <textarea id="emailMessage" rows="10" cols="50" placeholder="Digite sua mensagem de e-mail aqui..." required></textarea>
-                    <br />
-                    <button onclick="">Enviar Email</button> -->
                     <i style="font-size: 50px;" class="fa-regular fa-envelope"></i>
                     <h3>E-mail</h3>
                 </div>
@@ -42,18 +37,16 @@
                 <div>
                     <i style="font-size: 50px;" class="fa-solid fa-phone"></i>
                     <h3>Telefone</h3>
-                    <!-- <h2>Enviar DM no Instagram</h2>
-                    <textarea id="instagramMessage" rows="10" cols="50" placeholder="Digite sua mensagem para o Instagram aqui..." required></textarea>
-                    <br />
-                    <button onclick="">Enviar DM no Instagram</button> -->
                 </div>
             </div>
         </div>
+        
         <footer>
             <p>&copy; 2024 Klikdiaz - Todos os direitos reservados.</p>
         </footer>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"></script>
-        <script type="text/javascript" src="../js/msg.js"></script>
         
+        <!-- Certifique-se de que o arquivo script.js está sendo carregado corretamente -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"></script>
+        <script type="text/javascript" src="../js/script.js"></script>
     </body>
 </html>
