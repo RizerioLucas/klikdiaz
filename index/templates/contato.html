@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
         <title>Meu Site Fotográfico</title>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     </head>
     <body style="background: linear-gradient(180deg, rgba(83,83,83,1) 0%, rgba(0,0,0,1) 100%);">
         <header>
-            <a href="./index.html" class="logo">LOGO HERE</a>
+            <a href="./index.html" class="logo"><img src="../assets/img/logo_no_back.png"></img></a>
             <nav>
                 <a class="nav-item" href="./portifolio.html">PORTFÓLIO</a>
                 <a class="nav-item" href="./sobre.html">SOBRE</a>
@@ -22,20 +23,20 @@
                 <h1 style="color: white">Entre em contato</h1>
                 <div class="search-bar">
                     <!-- Corrigir campo de input para textarea -->
-                    <textarea id="userMessage" rows="10" cols="50" placeholder="Digite sua mensagem de e-mail aqui..." required></textarea>
+                    <input type="text" id="userMessage" placeholder="Digite sua mensagem de e-mail aqui..." required />
                     <!-- Botão chama a função diretamente -->
                     <button type="button" onclick="enviarEmail()">ENVIAR</button>
                 </div>
             </div>
             
             <div class="content">
-                <div>
-                    <i style="font-size: 50px;" class="fa-regular fa-envelope"></i>
+                <div class="icon" onclick="enviarEmail()">
+                    <i class="fa-regular fa-envelope"></i>
                     <h3>E-mail</h3>
                 </div>
                 
-                <div onclick="sendWhatsAppMessage()">
-                    <i style="font-size: 50px;" class="fa-solid fa-phone"></i>
+                <div class="icon" onclick="sendWhatsAppMessage()">
+                    <i class="fa-solid fa-phone"></i>
                     <h3>Telefone</h3>
                 </div>
                 

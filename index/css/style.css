@@ -6,7 +6,7 @@ body {
     height:100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('../assets/img/fundo.jpg'); /* Caminho da sua imagem de fundo */
+    /*background-image: url('../assets/img/fundo.jpg');  Caminho da sua imagem de fundo */
     background-size: cover; /* Faz com que a imagem cubra a página inteira */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição da imagem */
@@ -30,6 +30,10 @@ header .logo {
     user-select: none;
     color: black;
     text-decoration: none;
+    height:60px;
+}
+header .logo img{
+    height:100%;;
 }
 
 header nav {
@@ -248,7 +252,10 @@ footer {
     justify-content: center;
 }
 .search-bar{
-    width:90%;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     input{
         padding:0px;
         width:80%;
@@ -256,6 +263,7 @@ footer {
         border:none;
         outline:none;
         border-radius: 10px;
+        text-align:center
     }
     button{
         background-color: black;
@@ -265,6 +273,7 @@ footer {
         width:100px;
         height:50px;
         cursor: pointer;
+        margin-left: 10px;
     }
 }
 /* título da index.html */
@@ -278,4 +287,47 @@ footer {
     color:white;
     font-size: 80px;
     font-family: 'Monaco', Monaco, monospace;
+}
+
+.icon{
+    cursor: pointer;
+    transition: 200ms;
+    i{
+        font-size: 50px;
+    }
+    svg{
+        transition:200ms;
+        font-size: 50px;
+    }
+}
+.icon:hover{
+    i{
+        font-size: 70px;
+    }
+    svg{
+        font-size: 70px;
+    }
+}
+#portifolio-container{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    margin:50px;
+}
+#portifolio-container .portifolio-item{
+    display:flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    width:80%;
+    .black-background{
+        overflow: hidden;
+        background-color: black;
+        color: white; 
+        width: 70%;
+        display: flex;
+        justify-content: start;
+        align-content: center;
+        flex-direction: column;
+    }
 }
