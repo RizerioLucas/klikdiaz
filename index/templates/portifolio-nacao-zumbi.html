@@ -74,18 +74,40 @@
         }
         /* Botão "Ver mais..." */
         .load-more-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #008CBA;
-            color: white;
+            display: flex;
+            color: #1278f7;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            width: 90px;
+            height: 90px;
+            flex-direction: column;
         }
         .load-more-btn:hover {
-            background-color: #005f6a;
+            background-color: #1278f7;
+            color: white;
+            .arrow{
+                border: solid white;
+                border-width: 0 3px 3px 0;
+            }
         }
+
+        .arrow {
+            border: solid #1278f7;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            width:20px;
+            height:20px;
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
     </style>
 </head>
 <body>
@@ -105,8 +127,12 @@
     </div>
 
     <!-- Botão "Ver mais..." -->
-    <button class="load-more-btn" id="loadMoreBtn" onclick="loadImages()">Ver mais...</button>
-
+    <div style="display:flex; justify-content: center;">
+        <div class="load-more-btn" id="loadMoreBtn" onclick="loadImages()">
+            Ver mais...
+            <i class="arrow down"></i>
+        </div>
+    </div>
     <!-- Modal para expandir imagens -->
     <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
