@@ -21,7 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 2px black;
+    border-bottom: solid 2px #1278f7;
 }
 
 header .logo {
@@ -48,7 +48,7 @@ header nav {
     display:flex;
     padding: 10px 15px;
     margin: 0 15px;
-    color: black;
+    color: #1278f7;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -58,7 +58,7 @@ header nav {
 
 .nav-item:hover{
     transition:200ms;
-    background-color: black;
+    background-color: #1278f7;
     cursor: pointer;
     color: white;
 }
@@ -72,7 +72,7 @@ header nav {
     user-select: none;
     padding: 0px 15px;
     margin: 0 15px;
-    background-color: black;
+    background-color: #1278f7;
     text-decoration: none;
     animation-name: activating-nav-item;
     animation-duration: 500ms;
@@ -85,7 +85,7 @@ header nav {
 }
 
 .nav-item-active:hover{
-    background-color: black;
+    background-color: #1278f7;
     cursor: default;
     font-weight: bold;
 }
@@ -130,7 +130,7 @@ header nav {
 }
 
 footer {
-    background-color: #000; /* Fundo preto sólido */
+    background-color: #1278f7; /* Fundo preto sólido */
     color: white;
     text-align: center;
     padding: 10px;
@@ -266,7 +266,7 @@ footer {
         text-align:center
     }
     button{
-        background-color: black;
+        background-color: #1278f7;
         color: white;
         border:none;
         border-radius: 10px;
@@ -291,6 +291,7 @@ footer {
 
 .icon{
     cursor: pointer;
+    color: #1278f7;
     transition: 200ms;
     i{
         font-size: 50px;
@@ -301,6 +302,7 @@ footer {
     }
 }
 .icon:hover{
+    color: #1278f7;
     i{
         font-size: 70px;
     }
@@ -320,9 +322,9 @@ footer {
     flex-direction: row; 
     justify-content: space-between; 
     width:80%;
-    .black-background{
+    .item-background{
         overflow: hidden;
-        background-color: black;
+        background-color: #1278f7;
         color: white; 
         width: 70%;
         display: flex;
