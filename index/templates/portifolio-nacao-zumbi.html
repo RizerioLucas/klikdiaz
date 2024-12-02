@@ -27,14 +27,14 @@
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             cursor: pointer;
-            transition:200ms;
+            transition: 200ms;
         }
         .portfolio-item img {
             width: 100%;
             height: 100%;
             object-fit: cover; /* Ajusta a imagem para preencher a área mantendo proporções */
         }
-        .portfolio-item:hover{
+        .portfolio-item:hover {
             transform: scale(1.05);
         }
 
@@ -72,94 +72,40 @@
                 max-height: 90%;
             }
         }
+        /* Botão "Ver mais..." */
+        .load-more-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .load-more-btn:hover {
+            background-color: #005f6a;
+        }
     </style>
 </head>
 <body>
     <header>
-    <!-- Navigation -->
-        <a href="./index.html" class="logo"><img src="../assets/img/logo_no_back.png"></img></a>
+        <!-- Navigation -->
+        <a href="./index.html" class="logo"><img src="../assets/img/logo_no_back.png" alt="Logo"></a>
         <nav>
             <a class="nav-item" href="./portifolio.html">PORTFÓLIO</a>
             <a class="nav-item" href="./sobre.html">SOBRE</a>
             <a class="nav-item" href="./contato.html">CONTATO</a>
         </nav>
     </header>
+
     <!-- Portfolio Section -->
     <div class="portfolio-container">
-        <!-- Carregar dinamicamente as imagens da pasta zombie -->
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/1.jpg" alt="Foto 1" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/2.jpg" alt="Foto 2" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/3.jpg" alt="Foto 3" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/4.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/5.jpg" alt="Foto 1" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/6.jpg" alt="Foto 2" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/7.jpg" alt="Foto 3" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/8.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/9.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/10.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/11.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/12.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/13.jpg" alt="Foto 3" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/14.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/15.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/16.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/17.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/18.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/19.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/20.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/21.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/22.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/23.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="../assets/img/zombie/24.jpg" alt="Foto 4" onclick="openModal(this.src)">
-        </div>
+        <!-- As imagens serão carregadas dinamicamente aqui -->
     </div>
+
+    <!-- Botão "Ver mais..." -->
+    <button class="load-more-btn" id="loadMoreBtn" onclick="loadImages()">Ver mais...</button>
 
     <!-- Modal para expandir imagens -->
     <div id="imageModal" class="modal">
@@ -167,7 +113,30 @@
         <img class="modal-content" id="modalImage">
     </div>
 
+    <!-- Script -->
     <script>
+        let currentIndex = 0;
+        const imagesPerLoad = 8; // Quantas imagens carregar por vez
+        const totalImages = 24; // Número total de imagens (ajuste conforme o número de suas imagens)
+
+        function loadImages() {
+            const container = document.querySelector('.portfolio-container');
+            
+            // Carregar as próximas imagens
+            for (let i = currentIndex; i < currentIndex + imagesPerLoad && i < totalImages; i++) {
+                const imgElement = document.createElement('div');
+                imgElement.classList.add('portfolio-item');
+                imgElement.innerHTML = `<img src="../assets/img/zombie/${i + 1}.jpg" alt="Foto ${i + 1}" onclick="openModal(this.src)" loading="lazy">`;
+                container.appendChild(imgElement);
+            }
+            currentIndex += imagesPerLoad;
+
+            // Se todas as imagens foram carregadas, esconder o botão
+            if (currentIndex >= totalImages) {
+                document.getElementById('loadMoreBtn').style.display = 'none';
+            }
+        }
+
         // Abre o modal com a imagem clicada
         function openModal(src) {
             document.getElementById('modalImage').src = src;
@@ -178,7 +147,9 @@
         function closeModal() {
             document.getElementById('imageModal').style.display = 'none';
         }
-    </script>
 
+        // Carregar as primeiras imagens ao carregar a página
+        window.addEventListener('load', loadImages);
+    </script>
 </body>
 </html>
