@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Portfólio - Nação Zumbi</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Grid Layout */
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsivo */
+            gap: 15px;
+            padding: 20px;
+        }
+        .portfolio-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta a imagem para preencher a área mantendo proporções */
+        }
+
+        /* Modal (expansão da imagem) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* Estilo responsivo para modal */
+        @media (max-width: 768px) {
+            .modal-content {
+                max-width: 90%;
+                max-height: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a class="nav-item" href="./portifolio.html">PORTFÓLIO</a>
+        <a class="nav-item" href="./sobre.html">SOBRE</a>
+        <a class="nav-item" href="./contato.html">CONTATO</a>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <div class="portfolio-container">
+        <!-- Carregar dinamicamente as imagens da pasta zombie -->
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/1.jpg" alt="Foto 1" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/2.jpg" alt="Foto 2" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/3.jpg" alt="Foto 3" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/4.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/5.jpg" alt="Foto 1" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/6.jpg" alt="Foto 2" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/7.jpg" alt="Foto 3" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/8.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/9.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/10.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/11.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/12.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/13.jpg" alt="Foto 3" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/14.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/15.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/16.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/17.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/18.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/19.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/20.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/21.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/22.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/23.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="../assets/img/zombie/24.jpg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+    </div>
+
+    <!-- Modal para expandir imagens -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Abre o modal com a imagem clicada
+        function openModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        // Fecha o modal
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
