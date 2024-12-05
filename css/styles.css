@@ -11224,7 +11224,7 @@ body {
       outline:none;
       border-radius: 10px;
       text-align:center;
-      border: 2px solid #bad9ff;
+      border: 2px solid #000;
       transition:200ms;
   }
   input:focus{
@@ -11232,7 +11232,7 @@ body {
     transition:200ms;
 }
   button{
-      background-color: #1278f7;
+      background-color: #000;
       color: white;
       border:none;
       border-radius: 10px;
@@ -11263,12 +11263,12 @@ body {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  color: #1278f7;
+  color: #000;
   transition: 200ms;
   width: 150px;
   justify-content: center;
   align-items: center;
-  border: 2px solid #bad9ff;
+  border: 2px solid #000;
   border-radius: 150px;
   height: 150px;
   i{
